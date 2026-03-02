@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGV - Evan Cocain Informatique</title>
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --soft-blue: #eff6ff;
+            --accent-yellow: #facc15;
+            --text-dark: #0f172a;
+            --text-muted: #475569;
+            --bg-body: #f1f5f9;
+            --white: #ffffff;
+        }
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-dark);
+            background-color: var(--bg-body);
+            margin: 0;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 60px;
+            border-radius: 32px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+        }
+        .header {
+            text-align: center;
+            border-bottom: 2px solid var(--soft-blue);
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+        }
+        h1 { color: var(--primary-blue); font-size: 2.5em; letter-spacing: -1px; margin: 0; }
+        .legal-info { font-size: 0.9em; color: var(--text-muted); margin-top: 15px; text-transform: uppercase; letter-spacing: 1px; }
+        
+        .section {
+            margin-bottom: 40px;
+            position: relative;
+        }
+        h2 { 
+            color: var(--primary-blue); 
+            font-size: 1.4em; 
+            display: flex; 
+            align-items: center; 
+            gap: 12px;
+            border-left: 4px solid var(--accent-yellow);
+            padding-left: 15px;
+            margin-bottom: 20px;
+        }
+        .highlight-box { 
+            background: var(--soft-blue); 
+            border-radius: 16px; 
+            padding: 25px; 
+            margin: 20px 0; 
+            font-size: 0.95em;
+            color: #1e3a8a;
+        }
+        .urgent-badge {
+            background: #fee2e2;
+            color: #b91c1c;
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-weight: 800;
+            font-size: 0.8em;
+            display: inline-flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        ul { list-style: none; padding: 0; }
+        li { margin-bottom: 12px; padding-left: 25px; position: relative; }
+        li::before { content: "→"; position: absolute; left: 0; color: var(--accent-yellow); font-weight: bold; }
+        
+        .footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid var(--soft-blue);
+            text-align: center;
+            font-size: 0.85em;
+            color: var(--text-muted);
+        }
+        strong { color: var(--text-dark); }
+
+        @media (max-width: 600px) {
+            .container { padding: 30px 20px; }
+            h1 { font-size: 1.8em; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="index.html" style="display: inline-block; margin-bottom: 20px; color: #2563eb; text-decoration: none; font-weight: bold;">← Retour à l'accueil</a>
+    <div class="header">
+        <h1>Conditions Générales de Vente</h1>
+        <p class="legal-info">Version 2.0 - 02/03/2026 | Evan Cocain Informatique</p>
+    </div>
+
+    <div class="section">
+        <h2>📍 1. Nature des Interventions (SAP)</h2>
+        <p>Les prestations fournies par <strong>Evan Cocain Informatique</strong> sont exclusivement destinées aux particuliers, au titre des Services à la Personne (SAP).</p>
+        <div class="highlight-box">
+            ⚠️ <strong>Exclusion de Vente :</strong> Conformément à la réglementation SAP, le prestataire ne vend aucun matériel (pièces détachées, PC, licences payantes). Le client achète son matériel séparément ; l'intervention ne couvre que la <strong>main-d'œuvre et le conseil</strong>.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>💰 2. Tarification & Conditions de Paiement</h2>
+        <p>Les prix sont nets de taxe (TVA non applicable, art. 293 B du CGI).</p>
+        <div class="urgent-badge">⚡ FORFAIT URGENCE : +20€</div>
+        <ul>
+            <li><strong>Intervention Prioritaire :</strong> Toute demande sous 24h ou en dehors des créneaux habituels entraîne une majoration de 20€ (avant crédit d'impôt).</li>
+            <li><strong>Tarif Solidaire :</strong> (Étudiants, RSA, ASPA) Appliqué uniquement sur présentation d'un <strong>justificatif original valide</strong> le jour de l'intervention.</li>
+            <li><strong>Déplacements :</strong> Inclus sur Rennes. En cas d'absence du client non signalée 24h avant le rendez-vous, une indemnité de 20€ sera facturée.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🛡️ 3. Sécurité & Données Personnelles (RGPD)</h2>
+        <ul>
+            <li><strong>Sauvegardes :</strong> Le prestataire n'effectue aucune sauvegarde automatique. Le client doit sécuriser ses fichiers personnels (photos, documents) <strong>avant</strong> l'intervention.</li>
+            <li><strong>Confidentialité :</strong> Evan Cocain s'engage à ne consulter que les fichiers strictement nécessaires au dépannage. Aucune donnée n'est copiée ou stockée sans accord écrit.</li>
+            <li><strong>Limitation :</strong> La responsabilité du prestataire ne peut être engagée pour des pannes matérielles fatales liées à l'âge du matériel (vétusté).</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>🏦 4. Dispositifs de Crédit d'Impôt</h2>
+        <p><strong>Avance Immédiate (Urssaf) :</strong> Option gratuite permettant de ne payer que 50% de la facture. Nécessite un RIB, un numéro fiscal et que le client soit déjà connu de l'administration fiscale.</p>
+        <p><strong>Défaut Technique :</strong> Si l'activation du service Urssaf échoue (rejet, bug informatique), le règlement de <strong>100% de la prestation</strong> est exigible immédiatement. Le client récupérera son crédit d'impôt via son attestation annuelle.</p>
+    </div>
+
+    <div class="section">
+        <h2>⚖️ 5. Médiation & Juridiction</h2>
+        <p>Conformément aux articles L.616-1 du Code de la consommation, le client peut saisir le médiateur de la consommation compétent en cas de litige non résolu. À défaut, le tribunal de <strong>Rennes</strong> sera seul compétent.</p>
+    </div>
+
+    <div class="footer">
+        <strong>Evan Cocain Informatique</strong> | SIREN : 10136043600014 | Agrément SAP/101360436<br>
+        Assurance RCP : Orus | Déclaré auprès de la DREETS Calvados
+    </div>
+</div>
+<footer style="margin-top: 50px; padding: 30px; border-top: 1px solid #e2e8f0; text-align: center; font-size: 0.9em; color: #64748b;">
+    <p>&copy; 2026 Evan Cocain Informatique - Tous droits réservés</p>
+    <div style="margin-top: 10px;">
+        <a href="cgv.html" style="color: #2563eb; text-decoration: none; margin: 0 10px;">Conditions Générales de Vente</a> | 
+        <a href="mentions_legales.html" style="color: #2563eb; text-decoration: none; margin: 0 10px;">Mentions Légales</a>
+    </div>
+</footer>
+</body>
+</html>
