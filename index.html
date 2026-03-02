@@ -97,7 +97,7 @@
             border-radius: 50px;
             font-weight: 800;
             box-shadow: 0 4px 15px rgba(250, 204, 21, 0.4);
-            margin-bottom: 30px;
+            margin-bottom:0px;
             font-size: 1.1em;
         }
 
@@ -255,6 +255,137 @@
             .tax-benefit-card { padding: 30px 20px; }
         }
 
+        
+/* --- Pricing Grid --- */
+        .pricing-section-title {
+            text-align: center;
+            margin: 80px 0 40px;
+        }
+        .pricing-section-title h2 {
+            color: var(--primary-dark);
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        .pricing-card {
+            background: var(--white);
+            border-radius: 24px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            border: 2px solid #e2e8f0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+        }
+        .pricing-card.popular {
+            border-color: var(--primary);
+            box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
+        }
+        .popular-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary);
+            color: var(--white);
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-weight: 800;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .price-value {
+            font-size: 3.5em;
+            font-weight: 800;
+            color: var(--primary-dark);
+            margin: 20px 0 5px;
+            line-height: 1;
+        }
+        .price-sub {
+            color: var(--text-muted);
+            font-size: 0.95em;
+            margin-bottom: 25px;
+            min-height: 45px;
+        }
+        .pricing-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 30px 0;
+            text-align: left;
+            flex-grow: 1;
+        }
+        .pricing-features li {
+            margin-bottom: 15px;
+            padding-left: 30px;
+            position: relative;
+            font-size: 0.95em;
+            color: var(--text-main);
+        }
+        .pricing-features li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #22c55e; /* Vert de validation */
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .btn-choose {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            background: var(--white);
+            color: var(--primary);
+            border-radius: 14px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 1.1em;
+            transition: 0.3s;
+            border: 2px solid var(--primary);
+            box-sizing: border-box;
+        }
+        .btn-choose:hover {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .pricing-card.popular .btn-choose {
+            background: var(--primary);
+            color: var(--white);
+        }
+        .pricing-card.popular .btn-choose:hover {
+            background: var(--primary-dark);
+            border-color: var(--primary-dark);
+        }
+
+        .price-real {
+            font-size: 2.2em;
+            font-weight: 800;
+            color: var(--text-main);
+            margin: 15px 0 5px;
+            line-height: 1;
+        }
+        .price-after-tax {
+            background: #dcfce7;
+            color: #166534;
+            padding: 10px 15px;
+            border-radius: 12px;
+            font-size: 1.2em;
+            font-weight: 800;
+            margin: 15px 0 25px;
+            display: inline-block;
+            border: 1px solid #bbf7d0;
+        }
     </style>
 </head>
 <body>
@@ -302,18 +433,74 @@
         <a href="infos_credit_impots.html" class="tax-link-btn">Découvrir le fonctionnement ➔</a>
     </div>
 
-    <div class="info-section">
-        <div class="info-card">
-            <h2>💰 Tarifs Transparents</h2>
-            <p style="font-size: 1.1em;"><strong>Classique :</strong> 30€/h*</p>
-            <p style="font-size: 1.1em; color: var(--primary-dark);"><strong>Lancement :</strong> 25€/h* <small>(jusqu'au 30 avril)</small></p>
-            <p style="font-style: italic; color: var(--text-muted); font-size: 0.9em; margin-top: 15px;">*Après crédit d'impôt immédiat</p>
+    <div class="pricing-section-title">
+        <h2>Des tarifs clairs et sans surprise</h2>
+        <p style="font-size: 1.2em; color: var(--text-muted);">Tous les prix affichés tiennent compte de l'<strong>Avance Immédiate de 50%</strong>.</p>
+    </div>
+
+    <div class="pricing-section-title">
+        <h2>Des tarifs clairs, sans mauvaise surprise</h2>
+        <p style="font-size: 1.2em; color: var(--text-muted);">Tarifs nets (TVA non applicable). Profitez de 50% de prise en charge avec l'Avance Immédiate.</p>
+    </div>
+
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3 style="font-size: 1.5em; margin: 0;">Dépannage 1h</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Intervention ponctuelle</p>
+            
+            <div class="price-real">50€<span style="font-size: 0.4em; color: var(--text-muted);">/h</span></div>
+            <div class="price-after-tax">Soit 25€ /h*</div>
+            
+            <ul class="pricing-features">
+                <li>Diagnostic à domicile</li>
+                <li>Résolution de panne courante</li>
+                <li>Conseils personnalisés</li>
+                <li>Déplacement inclus sur Rennes</li>
+            </ul>
+            <a href="tel:0782821690" class="btn-choose">Choisir cette formule</a>
         </div>
-        <div class="info-card">
-            <h2>🤝 Engagement Solidaire</h2>
-            <p>Le numérique doit être accessible à tous. Je propose un <strong>tarif à 15€/h</strong> pour les étudiants et demandeurs d'emploi.</p>
+
+        <div class="pricing-card popular">
+            <div class="popular-badge">Le plus demandé</div>
+            <h3 style="font-size: 1.5em; margin: 0;">Pack Sérénité 2h</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Remise à neuf complète</p>
+            
+            <div class="price-real">100€</div>
+            <div class="price-after-tax">Soit 50€ au total*</div>
+            
+            <ul class="pricing-features">
+                <li>Nettoyage complet (Virus/Malwares)</li>
+                <li>Mises à jour Système & Logiciels</li>
+                <li>Optimisation de la vitesse du PC</li>
+                <li>Vérification globale de la sécurité</li>
+            </ul>
+            <a href="tel:0782821690" class="btn-choose">Commander le Pack</a>
+        </div>
+
+        <div class="pricing-card">
+            <h3 style="font-size: 1.5em; margin: 0;">Carnet 5 Heures</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Pour un suivi régulier</p>
+            
+            <div class="price-real">230€</div>
+            <div class="price-after-tax">Soit 115€ au total*</div>
+            
+            <ul class="pricing-features">
+                <li>Soit 46€ l'heure au lieu de 50€</li>
+                <li>Utilisable en plusieurs visites</li>
+                <li>Idéal pour les cours informatiques</li>
+                <li>Priorité sur les rendez-vous</li>
+            </ul>
+            <a href="tel:0782821690" class="btn-choose">Acheter le Carnet</a>
         </div>
     </div>
+
+  
+    <div class="info-card" style="text-align: center; margin-bottom: 60px; display: flex; flex-direction: column; align-items: center;">
+        <span style="font-size: 2.5em; margin-bottom: 10px;">🤝</span>
+        <h2 style="margin-bottom: 15px;">Engagement Solidaire</h2>
+        <p style="font-size: 1.1em; margin-bottom: 0; max-width: 800px;">Le numérique doit être accessible à tous. Je propose un <strong>tarif réduit</strong> à 30€/h soit <strong>15€ après crédit d'impôt</strong> pour les étudiants, demandeurs d'emploi et bénéficiaires de minima sociaux sur présentation d'un justificatif.</p>
+    </div>
+    
 
     <div class="cta-box">
         <h3 style="font-size: 2em; margin-bottom: 10px;">Un souci avec votre ordinateur ?</h3>
