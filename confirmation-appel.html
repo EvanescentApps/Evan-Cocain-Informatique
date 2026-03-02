@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmation d'appel - Evan Cocain Informatique</title>
+    <style>
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #facc15;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --white: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #eef2ff, #dbeafe);
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            color: var(--text-main);
+            padding: 20px;
+        }
+
+        .card {
+            max-width: 480px;
+            width: 100%;
+            background: var(--white);
+            border-radius: 20px;
+            padding: 32px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
+            text-align: center;
+        }
+
+        .icon {
+            font-size: 3rem;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            color: var(--primary-dark);
+            font-size: 1.9rem;
+        }
+
+        p {
+            margin: 0 0 18px;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .actions {
+            display: grid;
+            gap: 12px;
+            margin: 18px 0 10px;
+        }
+
+        .btn {
+            display: block;
+            padding: 14px 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        .btn-primary:hover { background: var(--primary-dark); }
+
+        .btn-secondary {
+            background: var(--white);
+            color: var(--primary-dark);
+            border-color: #e2e8f0;
+        }
+
+        .note {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="icon">📞</div>
+        <h1>Appel en cours</h1>
+        <p>Nous avons lancé l'appel vers le 07 82 82 16 90. Si rien ne se passe, appuyez sur le bouton ci-dessous pour lancer l'appel manuellement.</p>
+        <div class="actions">
+            <a class="btn btn-primary" href="tel:0782821690">Relancer l'appel</a>
+            <a class="btn btn-secondary" href="index.html">Revenir à l'accueil</a>
+        </div>
+    </div>
+</body>
+</html>

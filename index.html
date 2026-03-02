@@ -386,6 +386,30 @@
             display: inline-block;
             border: 1px solid #bbf7d0;
         }
+
+        .price-marketing {
+            font-size: 3.8em;
+            font-weight: 900;
+            color: #166534; /* Vert succès */
+            margin: 10px 0 0;
+            line-height: 1;
+        }
+        .price-label-green {
+            font-size: 0.85em;
+            font-weight: 800;
+            color: #166534;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+        }
+        .price-legal-tag {
+            font-size: 0.9em;
+            color: var(--text-muted);
+            background: #f1f5f9;
+            padding: 8px 12px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            display: inline-block;
+        }
     </style>
 </head>
 <body>
@@ -401,7 +425,7 @@
         <div class="promo-banner">🎁 -10€ JUSQU'AU 30 AVRIL !</div>
         <div class="hero-cta">
             <p style="font-weight: 600; color: var(--text-muted);">Diagnostic téléphonique 100% gratuit !</p>
-            <a href="tel:0782821690" class="phone-btn">📞 07 82 82 16 90</a>
+              <a href="tel:0782821690" class="phone-btn">📞 07 82 82 16 90</a>
         </div>
     </div>
 </div>
@@ -433,10 +457,65 @@
         <a href="infos_credit_impots.html" class="tax-link-btn">Découvrir le fonctionnement ➔</a>
     </div>
 
-    <div class="pricing-section-title">
-        <h2>Des tarifs clairs et sans surprise</h2>
-        <p style="font-size: 1.2em; color: var(--text-muted);">Tous les prix affichés tiennent compte de l'<strong>Avance Immédiate de 50%</strong>.</p>
+<div class="pricing-section-title">
+        <h2>Des tarifs clairs, sans mauvaise surprise</h2>
+        <p style="font-size: 1.2em; color: var(--text-muted);">Profitez immédiatement de 50% de prise en charge sur votre facture.</p>
     </div>
+
+    <div class="pricing-grid">
+        <div class="pricing-card">
+            <h3 style="font-size: 1.4em; margin: 0;">Dépannage 1h</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Intervention ponctuelle</p>
+            
+            <div class="price-marketing">25€<span style="font-size: 0.3em;">/h*</span></div>
+            <div class="price-label-green">APRÈS CRÉDIT D'IMPÔT</div>
+            <div class="price-legal-tag">Prix réel facturé : <strong>50€/h</strong></div>
+            
+            <ul class="pricing-features">
+                <li>Diagnostic à domicile</li>
+                <li>Résolution de panne courante</li>
+                <li>Conseils personnalisés</li>
+                <li>Déplacement inclus sur Rennes</li>
+            </ul>
+                <a href="tel:0782821690" class="btn-choose">Choisir cette formule</a>
+        </div>
+
+        <div class="pricing-card popular">
+            <div class="popular-badge">RECOMMANDÉ</div>
+            <h3 style="font-size: 1.4em; margin: 0;">Pack Sérénité 2h</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Remise à neuf complète</p>
+            
+            <div class="price-marketing">50€<span style="font-size: 0.3em;">*</span></div>
+            <div class="price-label-green">APRÈS CRÉDIT D'IMPÔT</div>
+            <div class="price-legal-tag">Prix réel facturé : <strong>100€</strong></div>
+            
+            <ul class="pricing-features">
+                <li>Nettoyage complet (Virus/Malwares)</li>
+                <li>Mises à jour Système & Logiciels</li>
+                <li>Optimisation de la vitesse du PC</li>
+                <li>Vérification globale de la sécurité</li>
+            </ul>
+                <a href="tel:0782821690" class="btn-choose">Commander le Pack</a>
+        </div>
+
+        <div class="pricing-card">
+            <h3 style="font-size: 1.4em; margin: 0;">Carnet 5 Heures</h3>
+            <p style="color: var(--text-muted); margin-top: 5px;">Suivi régulier & Cours</p>
+            
+            <div class="price-marketing">115€<span style="font-size: 0.3em;">*</span></div>
+            <div class="price-label-green">APRÈS CRÉDIT D'IMPÔT</div>
+            <div class="price-legal-tag">Prix réel facturé : <strong>230€</strong></div>
+            
+            <ul class="pricing-features">
+                <li>Soit <strong>46€/h</strong> au lieu de 50€</li>
+                <li>Utilisable en plusieurs visites</li>
+                <li>Idéal pour les cours informatiques</li>
+                <li>Priorité sur les rendez-vous</li>
+            </ul>
+                <a href="tel:0782821690" class="btn-choose">Acheter le Carnet</a>
+        </div>
+    </div>
+
 
     <div class="pricing-section-title">
         <h2>Des tarifs clairs, sans mauvaise surprise</h2>
@@ -449,7 +528,7 @@
             <p style="color: var(--text-muted); margin-top: 5px;">Intervention ponctuelle</p>
             
             <div class="price-real">50€<span style="font-size: 0.4em; color: var(--text-muted);">/h</span></div>
-            <div class="price-after-tax">Soit 25€ /h*</div>
+            <div class="price-after-tax">Soit 25€/h après crédit d'impôt</div>
             
             <ul class="pricing-features">
                 <li>Diagnostic à domicile</li>
@@ -466,7 +545,7 @@
             <p style="color: var(--text-muted); margin-top: 5px;">Remise à neuf complète</p>
             
             <div class="price-real">100€</div>
-            <div class="price-after-tax">Soit 50€ au total*</div>
+            <div class="price-after-tax">Soit 50€ après crédit d'impôt</div>
             
             <ul class="pricing-features">
                 <li>Nettoyage complet (Virus/Malwares)</li>
@@ -482,7 +561,7 @@
             <p style="color: var(--text-muted); margin-top: 5px;">Pour un suivi régulier</p>
             
             <div class="price-real">230€</div>
-            <div class="price-after-tax">Soit 115€ au total*</div>
+            <div class="price-after-tax">Soit 115€ après crédit d'impôt</div>
             
             <ul class="pricing-features">
                 <li>Soit 46€ l'heure au lieu de 50€</li>
@@ -523,6 +602,26 @@
         </div>
     </div>
 </footer>
+
+<script>
+(function() {
+    var confirmationPage = 'confirmation-appel.html';
+    var redirectDelay = 800;
+    var callLinks = document.querySelectorAll('a[href^="tel:0782821690"]');
+
+    if (!callLinks.length) {
+        return;
+    }
+
+    callLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            setTimeout(function() {
+                window.location.href = confirmationPage;
+            }, redirectDelay);
+        });
+    });
+})();
+</script>
 
 </body>
 </html>
