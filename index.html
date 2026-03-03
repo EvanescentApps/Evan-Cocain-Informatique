@@ -269,13 +269,13 @@
         .pricing-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 24px;
+            margin-bottom: 32px;
         }
         .pricing-card {
             background: var(--white);
-            border-radius: 24px;
-            padding: 40px 30px;
+            border-radius: 22px;
+            padding: 28px 22px;
             text-align: center;
             box-shadow: var(--shadow);
             border: 2px solid #e2e8f0;
@@ -292,17 +292,21 @@
             border-color: var(--primary);
             box-shadow: 0 15px 35px rgba(37, 99, 235, 0.15);
         }
+        .pricing-card.promo {
+            border-color: var(--secondary);
+            box-shadow: 0 12px 28px rgba(250, 204, 21, 0.2);
+        }
         .popular-badge {
             position: absolute;
-            top: -15px;
+            top: -30px;
             left: 50%;
             transform: translateX(-50%);
             background: var(--primary);
             color: var(--white);
-            padding: 5px 20px;
-            border-radius: 20px;
+            padding: 5px 18px;
+            border-radius: 18px;
             font-weight: 800;
-            font-size: 0.9em;
+            font-size: 0.85em;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -322,13 +326,13 @@
         .pricing-features {
             list-style: none;
             padding: 0;
-            margin: 0 0 30px 0;
+            margin: 0 0 22px 0;
             text-align: left;
             flex-grow: 1;
         }
         .pricing-features li {
-            margin-bottom: 15px;
-            padding-left: 30px;
+            margin-bottom: 10px;
+            padding-left: 28px;
             position: relative;
             font-size: 0.95em;
             color: var(--text-main);
@@ -344,13 +348,13 @@
         .btn-choose {
             display: block;
             width: 100%;
-            padding: 16px;
+            padding: 14px;
             background: var(--white);
             color: var(--primary);
             border-radius: 14px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 1.1em;
+            font-size: 1.05em;
             transition: 0.3s;
             border: 2px solid var(--primary);
             box-sizing: border-box;
@@ -369,20 +373,20 @@
         }
 
         .price-real {
-            font-size: 2.2em;
+            font-size: 2.1em;
             font-weight: 800;
             color: var(--text-main);
-            margin: 15px 0 5px;
+            margin: 12px 0 4px;
             line-height: 1;
         }
         .price-after-tax {
             background: #dcfce7;
             color: #166534;
-            padding: 10px 15px;
+            padding: 8px 12px;
             border-radius: 12px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             font-weight: 800;
-            margin: 15px 0 25px;
+            margin: 10px 0 18px;
             display: inline-block;
             border: 1px solid #bbf7d0;
         }
@@ -403,12 +407,167 @@
         }
         .price-legal-tag {
             font-size: 0.9em;
+            color: #fff;
+            background: linear-gradient(135deg, #f97316 0%, #fb923c 100%);
+            padding: 8px 14px;
+            border-radius: 999px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+            box-shadow: 0 8px 18px rgba(249, 115, 22, 0.3);
+            text-transform: uppercase;
+        }
+
+        .promo-badge {
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.82em;
+            color: #1f2937;
+            background: linear-gradient(135deg, #fde68a 0%, #facc15 100%);
+            padding: 6px 14px;
+            border-radius: 18px;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-weight: 800;
+            letter-spacing: 0.2px;
+            box-shadow: 0 10px 20px rgba(250, 204, 21, 0.35);
+            text-transform: uppercase;
+            white-space: nowrap;
+        }
+
+        .price-row { display: inline-flex; align-items: baseline; gap: 12px; margin: 8px 0 6px; justify-content: center; }
+        .price-old {
+            text-decoration: line-through;
             color: var(--text-muted);
-            background: #f1f5f9;
-            padding: 8px 12px;
-            border-radius: 10px;
-            margin-bottom: 25px;
+            font-size: 1.6em;
+            font-weight: 700;
+        }
+        .price-new {
+            font-size: 3em;
+            font-weight: 900;
+            color: #16a34a;
+            line-height: 1;
+        }
+        .price-unit { font-size: 0.4em; color: inherit; }
+
+        .pricing-note {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 5px solid var(--primary);
+            border-radius: 14px;
+            padding: 14px 16px;
+            color: var(--text-main);
+            margin: 6px 0 26px;
+            font-size: 0.98em;
+        }
+
+        /* --- Avance Immédiate Callout --- */
+        .activation-callout {
+            background: #ecfeff;
+            border: 1px solid #bae6fd;
+            border-left: 6px solid var(--primary);
+            border-radius: 20px;
+            padding: 24px;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            box-shadow: var(--shadow);
+            margin: 30px 0 50px;
+        }
+
+        .callout-icon { font-size: 2em; }
+
+        .callout-badge {
             display: inline-block;
+            background: #dbeafe;
+            color: var(--primary-dark);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-bottom: 8px;
+        }
+
+        .callout-list { margin: 10px 0 0; padding-left: 18px; }
+        .callout-list li { margin-bottom: 8px; color: var(--text-main); }
+        .callout-note { color: var(--text-muted); font-size: 0.95em; margin-top: 6px; }
+
+        /* --- Notification Form --- */
+        .notify-card {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid var(--primary);
+            border-radius: 18px;
+            padding: 22px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+            margin: 0 0 50px 0;
+        }
+        .notify-card h4 { margin: 0 0 6px; color: var(--primary-dark); }
+        .notify-card p { margin: 0 0 14px; color: var(--text-muted); }
+        .notify-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .notify-input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #d9e2ec;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        .notify-submit {
+            background: var(--primary);
+            color: var(--white);
+            border: none;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+            width: 100%;
+        }
+        .notify-submit:hover { background: var(--primary-dark); transform: translateY(-1px); }
+        .notify-note { font-size: 0.9em; color: var(--text-muted); margin-top: 8px; }
+
+        /* --- Trust & Social Proof --- */
+        .trust-section { margin: 50px 0 30px; text-align: center; }
+        .trust-section h2 { color: var(--primary-dark); margin-bottom: 18px; }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+        .trust-item {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 18px;
+            padding: 18px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.04);
+            text-align: left;
+        }
+        .trust-title { font-weight: 800; color: var(--primary-dark); margin: 6px 0; }
+        .trust-text { color: var(--text-muted); margin: 0; }
+
+        .social-proof { margin: 10px 0 60px; text-align: center; }
+        .testimonial-card {
+            background: var(--white);
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 20px;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.06);
+            max-width: 760px;
+            margin: 0 auto 16px;
+        }
+        .rating-stars { color: #f59e0b; font-size: 1.1em; letter-spacing: 2px; }
+        .testimonial-text { margin: 10px 0; color: var(--text-main); font-size: 1.05em; }
+        .testimonial-author { color: var(--text-muted); font-weight: 700; }
+        .logo-strip { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .logo-pill {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 999px;
+            padding: 8px 14px;
+            font-weight: 700;
+            color: var(--text-main);
         }
     </style>
     <!-- Google tag (gtag.js) -->
@@ -441,6 +600,8 @@
 </div>
 
 <div class="container">
+    
+
     <div class="services-grid">
         <div class="service-card">
             <span class="service-icon">🌐</span>
@@ -467,7 +628,26 @@
         <a href="infos_credit_impots.html" class="tax-link-btn">Découvrir le fonctionnement ➔</a>
     </div>
 
-   
+    <div class="trust-section">
+        <h2>Pourquoi me choisir ?</h2>
+        <div class="trust-grid">
+            <div class="trust-item">
+                <div style="font-size: 1.8em;">⚡</div>
+                <div class="trust-title">Intervention rapide</div>
+                <p class="trust-text">Créneaux sous 72h sur Rennes et alentours, avec diagnostic offert avant toute action.</p>
+            </div>
+            <div class="trust-item">
+                <div style="font-size: 1.8em;">🔒</div>
+                <div class="trust-title">Données sécurisées</div>
+                <p class="trust-text">Sauvegardes et confidentialité traitées en priorité, aucune donnée copiée sans accord.</p>
+            </div>
+            <div class="trust-item">
+                <div style="font-size: 1.8em;">😊</div>
+                <div class="trust-title">Pédagogie à domicile</div>
+                <p class="trust-text">Explications claires et écrites, avec mini-guides pour être autonome après l'intervention.</p>
+            </div>
+        </div>
+    </div>
 
     <div class="pricing-section-title">
         <h2>Des tarifs clairs, sans mauvaise surprise</h2>
@@ -475,12 +655,15 @@
     </div>
 
     <div class="pricing-grid">
-        <div class="pricing-card">
+        <div class="pricing-card promo">
+            <div class="promo-badge">⚡ Promo -10€ jusqu'au 30 avril</div>
             <h3 style="font-size: 1.5em; margin: 0;">Dépannage 1h</h3>
             <p style="color: var(--text-muted); margin-top: 5px;">Intervention ponctuelle</p>
-            
-            <div class="price-real">50€<span style="font-size: 0.4em; color: var(--text-muted);">/h</span></div>
-            <div class="price-after-tax">Soit 25€/h après crédit d'impôt</div>
+            <div class="price-row">
+                <div class="price-old">60€</div>
+                <div class="price-new">50€<span class="price-unit">/h</span></div>
+            </div>
+            <div class="price-after-tax">Soit 25€ après crédit d'impôt</div>
             
             <ul class="pricing-features">
                 <li>Diagnostic à domicile</li>
@@ -525,11 +708,61 @@
         </div>
     </div>
 
+    <div class="pricing-note">
+        <strong>Bon à savoir :</strong> l'activation du service Avance Immédiate nécessite 48h à 72h de traitement par l'Urssaf. Pour profiter des 50% dès votre première intervention, réservez idéalement votre créneau au moins 4 jours à l'avance.
+    </div>
+
+    <div class="activation-callout">
+        <div class="callout-icon">🛡️</div>
+        <div>
+            <div class="callout-badge">Info Avance Immédiate</div>
+            <h3 style="margin: 6px 0 8px; color: var(--primary-dark);">Avance Immédiate en cours d'activation</h3>
+            <p style="margin: 0; color: var(--text-main);">Suite au lancement officiel du 3 mars 2026, le raccordement technique à l'Urssaf est en cours (quelques semaines). Votre avantage reste garanti pendant cette phase.</p>
+            <ul class="callout-list">
+                <li>Vous conservez <strong>50% de crédit d'impôt</strong> sur toutes mes prestations.</li>
+                <li>Le règlement suit le mode classique : vous réglez 50€ (offre jusqu'au 30 avril) et vous récupérez 25€ sur votre prochaine déclaration.</li>
+                <li>Une <strong>attestation fiscale</strong> est fournie pour justifier l'avantage.</li>
+            </ul>
+            <p class="callout-note">Je vous préviendrai personnellement dès que le paiement immédiat à 25€ sera activé.</p>
+        </div>
+    </div>
+
+    <div class="notify-card">
+        <h4>Être prévenu dès l'activation</h4>
+        <p>Laissez vos coordonnées pour recevoir un message quand le paiement direct à 25€ sera ouvert.</p>
+        <form name="alerte-avance-home" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="alerte-avance-home">
+            <p style="display:none">
+                <label>Ne pas remplir <input name="bot-field"></label>
+            </p>
+            <div class="notify-grid">
+                <input class="notify-input" type="text" name="nom" placeholder="Votre nom" required>
+                <input class="notify-input" type="email" name="email" placeholder="Votre email" required>
+                <input class="notify-input" type="tel" name="telephone" placeholder="Téléphone (optionnel)">
+                <button type="submit" class="notify-submit">Me prévenir</button>
+            </div>
+            <div class="notify-note">Pas de spam : un seul message dès que l'Avance Immédiate est validée.</div>
+        </form>
+    </div>
+
   
     <div class="info-card" style="text-align: center; margin-bottom: 60px; display: flex; flex-direction: column; align-items: center;">
         <span style="font-size: 2.5em; margin-bottom: 10px;">🤝</span>
         <h2 style="margin-bottom: 15px;">Engagement Solidaire</h2>
         <p style="font-size: 1.1em; margin-bottom: 0; max-width: 800px;">Le numérique doit être accessible à tous. Je propose un <strong>tarif réduit</strong> à 30€/h soit <strong>15€ après crédit d'impôt</strong> pour les étudiants, demandeurs d'emploi et bénéficiaires de minima sociaux sur présentation d'un justificatif.</p>
+    </div>
+    
+    <div class="social-proof">
+        <div class="testimonial-card">
+            <div class="rating-stars">★★★★★</div>
+            <p class="testimonial-text">“Très pro, ponctuel et clair dans ses explications. Mon PC est reparti comme neuf et j'ai enfin un Wi-Fi stable.”</p>
+            <div class="testimonial-author">— Marie, Rennes Thabor</div>
+        </div>
+        <div class="logo-strip">
+            <span class="logo-pill">Google Avis 4.9/5</span>
+            <span class="logo-pill">Clients particuliers Rennes</span>
+            <span class="logo-pill">Interventions à domicile</span>
+        </div>
     </div>
     
 

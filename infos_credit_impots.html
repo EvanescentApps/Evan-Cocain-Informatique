@@ -100,6 +100,69 @@
         .footer-link { display: block; text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid #e2e8f0; color: var(--primary-blue); text-decoration: none; font-weight: bold; }
         .badge { display: inline-block; padding: 5px 15px; border-radius: 999px; font-size: 0.9em; margin-bottom: 20px; font-weight: bold; }
 
+        /* Bandeau d'information Avance Immédiate */
+        .activation-callout {
+            background: #ecfeff;
+            border: 1px solid #bae6fd;
+            border-left: 6px solid var(--primary-blue);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            gap: 14px;
+            align-items: flex-start;
+            box-shadow: 0 12px 28px rgba(0,0,0,0.08);
+            margin: 0 0 30px 0;
+        }
+        .callout-icon { font-size: 1.8em; }
+        .callout-badge {
+            display: inline-block;
+            background: #dbeafe;
+            color: var(--primary-blue);
+            padding: 6px 12px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 0.9em;
+            margin-bottom: 6px;
+        }
+        .callout-list { margin: 8px 0 0; padding-left: 18px; }
+        .callout-list li { margin-bottom: 8px; }
+        .callout-note { color: #64748b; font-size: 0.95em; margin-top: 6px; }
+
+        /* Formulaire d'alerte */
+        .notify-card {
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-left: 6px solid var(--primary-blue);
+            border-radius: 18px;
+            padding: 20px;
+            box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+            margin: 0 0 30px 0;
+        }
+        .notify-card h4 { margin: 0 0 6px; color: var(--primary-blue); }
+        .notify-card p { margin: 0 0 14px; color: #475569; }
+        .notify-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+        .notify-input {
+            width: 100%;
+            padding: 12px;
+            border-radius: 12px;
+            border: 1px solid #d9e2ec;
+            font-size: 1em;
+            box-sizing: border-box;
+        }
+        .notify-submit {
+            background: var(--primary-blue);
+            color: white;
+            border: none;
+            padding: 14px 18px;
+            border-radius: 12px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s ease, transform 0.2s ease;
+            width: 100%;
+        }
+        .notify-submit:hover { background: #1d4ed8; transform: translateY(-1px); }
+        .notify-note { font-size: 0.9em; color: #64748b; margin-top: 8px; }
+
         @media (max-width: 600px) {
             .tab-container { grid-template-columns: 1fr; }
             .hero-title { font-size: 1.8em; }
@@ -124,6 +187,44 @@
     <div class="hero-section">
         <div class="hero-title">Aide Informatique à Domicile</div>
         <div class="hero-catchphrase">🚀 Comment ne payer que 50% de la facture ?</div>
+    </div>
+
+    <div class="activation-callout">
+        <div class="callout-icon">🛡️</div>
+        <div>
+            <div class="callout-badge">Info Avance Immédiate</div>
+            <h3 style="margin: 6px 0 8px; color: var(--primary-blue);">Service en cours d'activation</h3>
+            <p style="margin: 0;">Depuis le lancement officiel du 3 mars 2026, le raccordement technique avec l'Urssaf est en instruction (quelques semaines).</p>
+            <ul class="callout-list">
+                <li>Vous gardez <strong>50% de crédit d'impôt</strong> sur toutes les prestations.</li>
+                <li>Pendant cette phase, vous réglez la facture de 50€ (jusqu'au 30 avril) et vous récupérez 25€ lors de votre prochaine déclaration.</li>
+                <li>Une <strong>attestation fiscale</strong> vous est remise pour sécuriser l'avantage.</li>
+            </ul>
+            <p class="callout-note">Je vous informerai personnellement dès que le paiement immédiat à 25€ sera disponible.</p>
+        </div>
+    </div>
+
+    <div class="info-card" style="border-left-color: var(--secondary-yellow); background: #fefce8;">
+        <h3>⏱️ Délai d'activation</h3>
+        <p style="margin: 0;">L'Urssaf valide l'Avance Immédiate en 48h à 72h. Pour bénéficier des 50% dès votre première intervention, réservez idéalement votre créneau <strong>4 jours à l'avance</strong>.</p>
+    </div>
+
+    <div class="notify-card">
+        <h4>Recevoir l'alerte d'activation</h4>
+        <p>Je vous écris dès que le paiement direct à 25€ est validé par l'Urssaf.</p>
+        <form name="alerte-avance-credit" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="alerte-avance-credit">
+            <p style="display:none">
+                <label>Ne pas remplir <input name="bot-field"></label>
+            </p>
+            <div class="notify-grid">
+                <input class="notify-input" type="text" name="nom" placeholder="Votre nom" required>
+                <input class="notify-input" type="email" name="email" placeholder="Votre email" required>
+                <input class="notify-input" type="tel" name="telephone" placeholder="Téléphone (optionnel)">
+                <button type="submit" class="notify-submit">Me prévenir</button>
+            </div>
+            <div class="notify-note">Un seul message informatif. Vous pouvez continuer à bénéficier des 50% en mode classique d'ici là.</div>
+        </form>
     </div>
 
     <div class="tab-container">
