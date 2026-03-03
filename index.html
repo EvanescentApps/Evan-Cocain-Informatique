@@ -712,6 +712,31 @@
         <strong>Bon à savoir :</strong> l'activation du service Avance Immédiate nécessite 48h à 72h de traitement par l'Urssaf. Pour profiter des 50% dès votre première intervention, réservez idéalement votre créneau au moins 4 jours à l'avance.
     </div>
 
+        <div class="notify-card">
+        <h4>Je veux être contacté</h4>
+        <p>Déposez vos coordonnées, je vous rappelle sous 24h pour planifier votre intervention.</p>
+        <form name="contact-rappel" netlify netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact-rappel">
+            <p style="display:none">
+                <label>Ne pas remplir <input name="bot-field"></label>
+            </p>
+            <div class="notify-grid">
+                <input class="notify-input" type="text" name="nom" placeholder="Votre nom" required>
+                <input class="notify-input" type="email" name="email" placeholder="Votre email" required>
+                <input class="notify-input" type="tel" name="telephone" placeholder="Téléphone" required>
+                <select class="notify-input" name="creneau" aria-label="Créneau préféré" required>
+                    <option value="">Créneau préféré</option>
+                    <option>Matin</option>
+                    <option>Après-midi</option>
+                    <option>Soir</option>
+                </select>
+                <textarea class="notify-input" name="besoin" rows="2" placeholder="Votre besoin en quelques mots (optionnel)"></textarea>
+                <button type="submit" class="notify-submit">Être rappelé</button>
+            </div>
+            <div class="notify-note">Pas de spam : un rappel personnalisé sous 24h.</div>
+        </form>
+    </div>
+
     <div class="activation-callout">
         <div class="callout-icon">🛡️</div>
         <div>
@@ -726,6 +751,8 @@
             <p class="callout-note">Je vous préviendrai personnellement dès que le paiement immédiat à 25€ sera activé.</p>
         </div>
     </div>
+
+
 
     <div class="notify-card">
         <h4>Être prévenu dès l'activation</h4>
