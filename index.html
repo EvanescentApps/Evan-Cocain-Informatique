@@ -569,6 +569,21 @@
             font-weight: 700;
             color: var(--text-main);
         }
+
+        .testimonial-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+        .testimonial-card.small { max-width: none; margin: 0; text-align: left; }
+        .testimonial-name { font-weight: 800; color: var(--primary-dark); }
+        .testimonial-meta { color: var(--text-muted); font-size: 0.9em; margin-top: 4px; }
+        .reviews-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 14px;
+            color: var(--primary-dark);
+            font-weight: 800;
+            text-decoration: none;
+        }
+        .reviews-link:hover { text-decoration: underline; }
     </style>
     <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-S529M76JC9">
@@ -624,8 +639,39 @@
         <span class="tax-badge">Avantage Fiscal Officiel</span>
         <h2>Divisez votre facture par 2 ! 💸</h2>
         <p style="font-size: 1.1em; max-width: 700px; margin: 20px auto;">Grâce à mon agrément <strong>Services à la Personne</strong>, bénéficiez de <strong>50% de crédit d'impôt</strong> sur toutes mes prestations.</p>
-        <p><strong>Nouveau :</strong> Avec l'Avance Immédiate, ne payez que la moitié de la facture le jour J !</p>
+        <p><strong>Nouveau :</strong> Avec l'Avance Immédiate (service gratuit et facultatif), ne payez que la moitié de la facture le jour J !</p>
         <a href="infos_credit_impots.html" class="tax-link-btn">Découvrir le fonctionnement ➔</a>
+    </div>
+
+    <div class="social-proof">
+        <div class="logo-strip" style="margin-bottom: 12px;">
+            <span class="logo-pill">Google Avis 5/5</span>
+            <span class="logo-pill">Clients particuliers Rennes</span>
+        </div>
+        <div class="testimonial-grid">
+            <div class="testimonial-card small">
+                <div class="rating-stars">★★★★★</div>
+                <p class="testimonial-text">“Professionnel efficace et rapide à recommander.”</p>
+                <div class="testimonial-name">dominique vasseur</div>
+                <div class="testimonial-meta">Avis Google · Visité en juillet 2025</div>
+            </div>
+            <div class="testimonial-card small">
+                <div class="rating-stars">★★★★★</div>
+                <p class="testimonial-text">“Parfait en infos, trucs et astuces autant que dans les conseils d'achat de matériel et logiciels.”</p>
+                <div class="testimonial-name">isabelle boisgontier</div>
+                <div class="testimonial-meta">Avis Google · Visité en mars</div>
+            </div>
+            <div class="testimonial-card small">
+                <div class="rating-stars">★★★★★</div>
+                <p class="testimonial-text">“Très bonne prestation, réactif et patient. Très bonnes connaissances en informatique, mérite d'être connu.”</p>
+                <div class="testimonial-name">Danielle Royer</div>
+                <div class="testimonial-meta">Avis Google · Visité en décembre 2025</div>
+            </div>
+            
+        </div>
+        <div>
+            <a class="reviews-link" href="https://share.google/JQdr5dHMc2RYaY10L" target="_blank" rel="noopener">Voir tous les avis Google ➜</a>
+        </div>
     </div>
 
     <div class="trust-section">
@@ -709,7 +755,7 @@
     </div>
 
     <div class="pricing-note">
-        <strong>Bon à savoir :</strong> l'activation du service Avance Immédiate nécessite 48h à 72h de traitement par l'Urssaf. Pour profiter des 50% dès votre première intervention, réservez idéalement votre créneau au moins 4 jours à l'avance.
+        <strong>Bon à savoir :</strong> l'activation du service Avance Immédiate nécessite 48h à 72h de traitement par l'Urssaf. Pour profiter des 50% dès votre première intervention, réservez idéalement votre créneau au moins 2 jours à l'avance.
     </div>
 
         <div class="notify-card">
@@ -749,29 +795,23 @@
                 <li>Une <strong>attestation fiscale</strong> est fournie pour justifier l'avantage.</li>
             </ul>
             <p class="callout-note">Je vous préviendrai personnellement dès que le paiement immédiat à 25€ sera activé.</p>
+
+            <h4>Restez informé de l'activation de l'Avance Immédiate</h4>
+            <form name="alerte-avance-home" netlify netlify-honeypot="bot-field" style="margin-top: 12px;">
+                <input type="hidden" name="form-name" value="alerte-avance-home">
+                <p style="display:none">
+                    <label>Ne pas remplir <input name="bot-field"></label>
+                </p>
+                <div class="notify-grid" style="margin-top: 8px;">
+                    <input class="notify-input" type="text" name="nom" placeholder="Votre nom" required>
+                    <input class="notify-input" type="email" name="email" placeholder="Votre email" required>
+                    <input class="notify-input" type="tel" name="telephone" placeholder="Téléphone (optionnel)">
+                    <button type="submit" class="notify-submit">Me prévenir</button>
+                </div>
+                <div class="notify-note">Pas de spam : un seul message dès que l'Avance Immédiate est validée.</div>
+            </form>
         </div>
     </div>
-
-
-
-    <div class="notify-card">
-        <h4>Être prévenu dès l'activation</h4>
-        <p>Laissez vos coordonnées pour recevoir un message quand le paiement direct à 25€ sera ouvert.</p>
-        <form name="alerte-avance-home" netlify netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="alerte-avance-home">
-            <p style="display:none">
-                <label>Ne pas remplir <input name="bot-field"></label>
-            </p>
-            <div class="notify-grid">
-                <input class="notify-input" type="text" name="nom" placeholder="Votre nom" required>
-                <input class="notify-input" type="email" name="email" placeholder="Votre email" required>
-                <input class="notify-input" type="tel" name="telephone" placeholder="Téléphone (optionnel)">
-                <button type="submit" class="notify-submit">Me prévenir</button>
-            </div>
-            <div class="notify-note">Pas de spam : un seul message dès que l'Avance Immédiate est validée.</div>
-        </form>
-    </div>
-
   
     <div class="info-card" style="text-align: center; margin-bottom: 60px; display: flex; flex-direction: column; align-items: center;">
         <span style="font-size: 2.5em; margin-bottom: 10px;">🤝</span>
@@ -779,20 +819,6 @@
         <p style="font-size: 1.1em; margin-bottom: 0; max-width: 800px;">Le numérique doit être accessible à tous. Je propose un <strong>tarif réduit</strong> à 30€/h soit <strong>15€ après crédit d'impôt</strong> pour les étudiants, demandeurs d'emploi et bénéficiaires de minima sociaux sur présentation d'un justificatif.</p>
     </div>
     
-    <div class="social-proof">
-        <div class="testimonial-card">
-            <div class="rating-stars">★★★★★</div>
-            <p class="testimonial-text">“Très pro, ponctuel et clair dans ses explications. Mon PC est reparti comme neuf et j'ai enfin un Wi-Fi stable.”</p>
-            <div class="testimonial-author">— Marie, Rennes Thabor</div>
-        </div>
-        <div class="logo-strip">
-            <span class="logo-pill">Google Avis 4.9/5</span>
-            <span class="logo-pill">Clients particuliers Rennes</span>
-            <span class="logo-pill">Interventions à domicile</span>
-        </div>
-    </div>
-    
-
     <div class="cta-box">
         <h3 style="font-size: 2em; margin-bottom: 10px;">Un souci avec votre ordinateur ?</h3>
         <p style="font-size: 1.2em; opacity: 0.9;">Appelez-moi pour un diagnostic gratuit et rapide.</p>

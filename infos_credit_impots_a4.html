@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Crédit d'impôt - Synthèse A4</title>
+  <style>
+    :root {
+      --primary: #2563eb;
+      --accent: #facc15;
+      --text: #0f172a;
+      --muted: #475569;
+      --border: #e2e8f0;
+      --soft: #f8fafc;
+    }
+    @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+    }
+    .page {
+      max-width: 178mm;
+      margin: 0 auto;
+      padding: 0;
+    }
+    h1 { margin: 0 0 4px 0; font-size: 21px; color: var(--primary); letter-spacing: -0.2px; }
+    h2 { margin: 12px 0 4px 0; font-size: 15px; color: var(--primary); }
+    p { margin: 3px 0 8px 0; font-size: 12.2px; color: var(--muted); }
+    ul { margin: 3px 0 8px 16px; padding: 0; color: var(--muted); font-size: 12.2px; }
+    li { margin-bottom: 5px; }
+    .badge { display: inline-block; padding: 4px 11px; background: var(--primary); color: #fff; border-radius: 11px; font-size: 10.8px; font-weight: 700; }
+    .card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 9px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      background: var(--soft);
+    }
+    .highlight { background: var(--accent); padding: 0 4px; border-radius: 4px; color: #1f2937; font-weight: 700; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 6px; margin: 6px 0 3px 0; }
+    .step { border: 1px solid var(--border); border-radius: 7px; padding: 7px 9px; background: #fff; font-size: 11.8px; color: var(--muted); }
+    .small { font-size: 11.2px; color: #6b7280; }
+    .footer { margin-top: 10px; font-size: 11.2px; color: #6b7280; border-top: 1px solid var(--border); padding-top: 7px; }
+    .pill { display: inline-block; padding: 3px 7px; border-radius: 999px; background: #e0e7ff; color: #1e3a8a; font-size: 10.5px; font-weight: 700; margin-right: 6px; }
+    .two-col { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 8px; }
+    .divider { border-top: 1px solid var(--border); margin: 10px 0; }
+    @media print {
+      a { color: inherit; text-decoration: none; }
+      .page { width: auto; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Crédit d'impôt 50% — Synthèse client</h1>
+    <div class="badge">Service optionnel, gratuit</div>
+    <p>Service mis en place par l'Urssaf et la Direction générale des Finances publiques (DGFiP). Vous restez libre d'utiliser le mode classique.</p>
+
+    <h2>1) Conditions d'accès</h2>
+    <ul>
+      <li>Particulier déjà connu de l'administration fiscale (numéro fiscal requis).</li>
+      <li>Fournir un <strong>RIB</strong> et valider l'email Urssaf reçu après pré-inscription.</li>
+      <li>Activation généralement en 48h à 72h (24h possible mais non garantie).</li>
+      <li>Si le compte n'est pas actif le jour J, le <strong>tarif classique (100% réglé)</strong> s'applique et le crédit sera récupéré sur la déclaration annuelle.</li>
+    </ul>
+
+    <div class="card" style="border-left-color: var(--accent);">
+      <strong>Checklist d'activation (à faire dès la réservation) :</strong>
+      <ul>
+        <li>Transmettre numéro fiscal + RIB.</li>
+        <li>Surveiller l'email Urssaf et cliquer sur "Activer".</li>
+        <li>Prévoir idéalement 48h d'anticipation (24h possible mais incertain).</li>
+      </ul>
+    </div>
+
+    <h2>2) Fonctionnement Avance Immédiate</h2>
+    <div class="grid">
+      <div class="step"><strong>Demande</strong> : après l'intervention, une demande de paiement est envoyée par mail/SMS.</div>
+      <div class="step"><strong>Validation</strong> : vous avez 48h pour valider ou contester sur votre espace Urssaf.</div>
+      <div class="step"><strong>Prélèvement</strong> : l'Urssaf prélève uniquement les <strong>50%</strong> restants sur votre compte.</div>
+    </div>
+
+    <div class="card">
+      <strong>Exemple rapide (offre 50€) :</strong>
+      <div class="two-col">
+        <div>
+          <span class="pill">Avec Avance Immédiate</span>
+          <p class="small" style="margin-top: 6px;">Vous validez la demande Urssaf → prélèvement de 25€ (50% restant). Pas d'avance de trésorerie.</p>
+        </div>
+        <div>
+          <span class="pill" style="background:#fef3c7; color:#92400e;">Sans Avance</span>
+          <p class="small" style="margin-top: 6px;">Vous payez 50€ le jour J → vous récupérez 25€ via votre déclaration annuelle.</p>
+        </div>
+      </div>
+    </div>
+
+    <h2>3) Fonctionnement classique (sans avance)</h2>
+    <div class="grid">
+      <div class="step"><strong>Paiement</strong> : vous réglez 100% de la facture (ex : 60€).</div>
+      <div class="step"><strong>Déclaration</strong> : vous reportez le total payé sur la déclaration de revenus.</div>
+      <div class="step"><strong>Remboursement</strong> : l'État verse 50% (ex : 30€) l'été suivant.</div>
+    </div>
+
+    <div class="card">
+      <strong>Plafonds annuels :</strong>
+      <ul>
+        <li>Dépenses SAP : <strong>12 000 €</strong> par an et par foyer (soit <strong>6 000 €</strong> de crédit d'impôt).</li>
+        <li>Assistance informatique : plafond spécifique <strong>3 000 €</strong> (soit <strong>1 500 €</strong> de crédit maximum).</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <strong>Récap express :</strong>
+      <ul>
+        <li>Avance Immédiate : optionnelle, gratuite, activation Urssaf en 48h-72h.</li>
+        <li>Mail Urssaf à valider : indispensable avant l'intervention.</li>
+        <li>Si non activé : facturation classique, crédit récupéré via votre déclaration.</li>
+        <li>Attestation fiscale annuelle fournie pour sécuriser votre déclaration.</li>
+      </ul>
+    </div>
+
+
+    <div class="card" style="border-left-color: var(--accent);">
+      <strong>Contact unique :</strong> pour toute question (prestations, facturation, avance), contactez <strong>Evan Cocain Informatique</strong> — 07 82 82 16 90 — evan.cocain.informatique@gmail.com
+    </div>
+
+    <div class="footer">
+      Evan Cocain Informatique · SIRET 10136043600014 · SAP/101360436 · RC Pro Orus (278536861)
+    </div>
+  </div>
+</body>
+</html>

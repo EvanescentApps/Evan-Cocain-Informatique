@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>CGV - Synthèse A4</title>
+  <style>
+    :root {
+      --primary: #1e40af;
+      --accent: #facc15;
+      --soft: #f8fafc;
+      --border: #e2e8f0;
+      --text: #0f172a;
+      --muted: #475569;
+    }
+    @page { size: A4; margin: 16mm 16mm 18mm 16mm; }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      color: var(--text);
+    }
+    .page { max-width: 178mm; margin: 0 auto; padding: 0; }
+    h1 { margin: 0 0 6px 0; font-size: 21px; color: var(--primary); letter-spacing: -0.2px; }
+    h2 { margin: 12px 0 4px 0; font-size: 15px; color: var(--primary); display: flex; align-items: center; gap: 8px; }
+    p { margin: 3px 0 8px 0; font-size: 12.2px; color: var(--muted); }
+    ul { margin: 3px 0 8px 16px; padding: 0; font-size: 12.2px; color: var(--muted); }
+    li { margin-bottom: 5px; }
+    .badge { display: inline-block; padding: 4px 11px; background: var(--primary); color: #fff; border-radius: 11px; font-size: 10.8px; font-weight: 700; }
+    .card {
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--primary);
+      border-radius: 9px;
+      padding: 10px 12px;
+      margin: 8px 0;
+      background: var(--soft);
+    }
+    .pill { display: inline-block; padding: 3px 7px; border-radius: 999px; background: #e0e7ff; color: #1e3a8a; font-size: 10.5px; font-weight: 700; margin-right: 6px; }
+    .small { font-size: 11.2px; color: #6b7280; }
+    .footer { margin-top: 10px; font-size: 11.2px; color: #6b7280; border-top: 1px solid var(--border); padding-top: 7px; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 6px; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>Conditions Générales de Vente — Synthèse</h1>
+    <div class="badge">Version 2.0 — 02/03/2026</div>
+    <p>Prestations SAP pour particuliers — Evan Cocain Informatique.</p>
+
+    <h2>📍 1. Nature des interventions</h2>
+    <div class="card">
+      <p>Services à la Personne (SAP) exclusivement pour particuliers. <strong>Pas de vente de matériel</strong> (PC, pièces, licences). Prestation = main-d'œuvre et conseil.</p>
+    </div>
+
+    <h2>💰 2. Tarifs & paiement</h2>
+    <ul>
+      <li>Prix nets de taxe (TVA non applicable, art. 293 B CGI).</li>
+      <li>Forfait urgence : +20€ si demande < 24h ou hors créneau.</li>
+      <li>Tarif solidaire (Étudiants, RSA, ASPA) sur justificatif original.</li>
+      <li>Déplacements inclus sur Rennes. Absence non signalée < 24h : indemnité 20€.</li>
+      <li>Après 1h : facturation à la demi-heure (50% du taux horaire).</li>
+    </ul>
+
+    <h2>⏱️ 2bis. Avance Immédiate</h2>
+    <div class="card">
+      <p><span class="pill">Activation</span> Urssaf traite en 48h-72h (24h possible mais non garantie). Infos demandées dès la réservation : numéro fiscal + RIB.</p>
+      <p><span class="pill" style="background:#fef3c7; color:#92400e;">Si non actif</span> le jour J : facturation classique (100%), crédit récupéré via attestation annuelle.</p>
+    </div>
+
+    <h2>🛡️ 3. Données & sécurité (RGPD)</h2>
+    <ul>
+      <li>Aucune sauvegarde automatique : le client sécurise ses données avant intervention.</li>
+      <li>Confidentialité : accès uniquement aux fichiers nécessaires, pas de copie sans accord écrit.</li>
+      <li>Limitation : pas de responsabilité pour pannes matérielles liées à la vétusté.</li>
+    </ul>
+
+    <h2>🏦 4. Crédit d'impôt</h2>
+    <div class="card">
+      <ul>
+        <li><strong>Avance Immédiate</strong> : option gratuite et facultative, paiement 50% immédiat. Requiert RIB, numéro fiscal, validation mail Urssaf.</li>
+        <li><strong>Mode classique</strong> : paiement 100%, restitution 50% via crédit d'impôt avec attestation annuelle fournie.</li>
+        <li><strong>Plafonds</strong> : SAP 12 000 € de dépenses/an/foyer (crédit max 6 000 €). Assistance informatique plafonnée à 3 000 € (crédit max 1 500 €).</li>
+      </ul>
+    </div>
+
+    <h2>⚖️ 5. Médiation & juridiction</h2>
+    <p>En cas de litige non résolu : médiateur de la consommation compétent. À défaut, tribunal de <strong>Rennes</strong>.</p>
+
+    <div class="card" style="border-left-color: var(--accent);">
+      <strong>Contact</strong><br>
+      Evan Cocain Informatique — 07 82 82 16 90 — evan.cocain.informatique@gmail.com
+    </div>
+
+    <div class="footer">
+      SIRET 10136043600014 · SAP/101360436 · RC Pro Orus (278536861)
+    </div>
+  </div>
+</body>
+</html>
